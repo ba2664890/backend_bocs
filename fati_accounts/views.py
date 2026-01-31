@@ -85,10 +85,23 @@ class UserViewSet(viewsets.ModelViewSet):
         # Créer ou récupérer le token
         token, created = Token.objects.get_or_create(user=user)
         
+    @action(detail=False, methods=['post'], permission_classes=[permissions.AllowAny])
+    def register(self, request):
+        """Création d'un nouveau compte utilisateur"""
+        serializer = UserCreateSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        # Par défaut, on active l'utilisateur pour la démo
+        # Dans une vraie app, on mettrait status='pending'
+        user = serializer.save(status='active', is_active=True)
+        
+        # Créer le token
+        token, created = Token.objects.get_or_create(user=user)
+        
         return Response({
             'token': token.key,
             'user': UserSerializer(user).data
-        })
+        }, status=status.HTTP_201_CREATED)
     
     @action(detail=False, methods=['post'], permission_classes=[permissions.IsAuthenticated])
     def logout(self, request):
