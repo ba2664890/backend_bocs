@@ -5,6 +5,7 @@ Fond d'Analyse Territoriale Intégrée
 
 from pathlib import Path
 import os
+import dj_database_url
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -23,6 +24,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,https://pro
 
 CSRF_TRUSTED_ORIGINS = [
     'https://projetstatagricole-production.up.railway.app',
+    'https://projet-bocs-app-hhrb.vercel.app',
 ]
 
 # Application definition
@@ -88,15 +90,15 @@ WSGI_APPLICATION = 'fati_backend.wsgi.application'
 
 # Database - PostgreSQL with PostGIS
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': os.environ.get('DB_NAME', 'fati_db'),
-        'USER': os.environ.get('DB_USER', 'fati_user'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'fati_password'),
-        'HOST': os.environ.get('DB_HOST', 'localhost'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL', f'postgres://{os.environ.get("DB_USER", "fati_user")}:{os.environ.get("DB_PASSWORD", "fati_password")}@{os.environ.get("DB_HOST", "localhost")}:{os.environ.get("DB_PORT", "5432")}/{os.environ.get("DB_NAME", "fati_db")}'),
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
+# Ensure PostGIS engine is used if not specified in URL
+if 'postgis' not in DATABASES['default']['ENGINE']:
+    DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 
 
 
@@ -164,6 +166,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:3000",
     "http://127.0.0.1:5173",
+    "https://projet-bocs-app-hhrb.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True

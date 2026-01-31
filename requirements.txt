@@ -12,6 +12,7 @@ djangorestframework-gis>=1.0
 
 # Database
 psycopg2-binary>=2.9.9
+dj-database-url
 
 dotenv
 
