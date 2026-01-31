@@ -13,7 +13,7 @@ djangorestframework-gis>=1.0
 # Database
 psycopg2-binary>=2.9.9
 
-
+dotenv
 
 # API Documentation
 drf-yasg>=1.21.0
