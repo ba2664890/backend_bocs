@@ -794,3 +794,244 @@ Traceback (most recent call last):
 "POST /api/auth/users/register/ HTTP/1.1" 201 548
 "GET /api/collections/collections/?page_size=100 HTTP/1.1" 200 52
 "POST /api/auth/users/logout/ HTTP/1.1" 200 35
+Unauthorized: /api/auth/users/logout/
+"POST /api/auth/users/logout/ HTTP/1.1" 401 30
+"OPTIONS /api/auth/users/login/ HTTP/1.1" 200 0
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 4519
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+"GET /static/admin/css/base.css HTTP/1.1" 200 21310
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3543
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+/home/cardan/Pictures/pro_suivi/plateforme/fati-backend/fati_backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/auth/users/register/ HTTP/1.1" 200 0
+"POST /api/auth/users/register/ HTTP/1.1" 201 555
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+"POST /api/auth/users/login/ HTTP/1.1" 200 580
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+Unauthorized: /api/auth/users/logout/
+"POST /api/auth/users/logout/ HTTP/1.1" 401 30
+"POST /api/auth/users/login/ HTTP/1.1" 200 546
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 4039
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"OPTIONS /api/auth/users/login/ HTTP/1.1" 200 0
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Method Not Allowed: /api/auth/users/login/
+"GET /api/auth/users/login/ HTTP/1.1" 405 49
+Bad Request: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 400 86
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+Watching for file changes with StatReloader
+"OPTIONS /api/indicators/values/?page_size=1000 HTTP/1.1" 200 0
+"OPTIONS /api/auth/users/?page_size=100 HTTP/1.1" 200 0
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 4039
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 4039
+"OPTIONS /api/auth/users/?page_size=100 HTTP/1.1" 200 0
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 4039
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+/home/cardan/Pictures/pro_suivi/plateforme/fati-backend/fati_backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/cardan/Pictures/pro_suivi/plateforme/fati-backend/fati_backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/cardan/Pictures/pro_suivi/plateforme/fati-backend/fati_backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 12587
+"GET /static/unfold/js/alpine/alpine.persist.js HTTP/1.1" 200 837
+"GET /static/unfold/css/simplebar/simplebar.css HTTP/1.1" 200 4647
+"GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 200 164
+"GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 200 608
+"GET /static/unfold/js/alpine/alpine.js HTTP/1.1" 200 44758
+"GET /static/unfold/js/alpine/alpine.sort.js HTTP/1.1" 200 37891
+"GET /static/unfold/js/alpine/alpine.anchor.js HTTP/1.1" 200 15524
+"GET /static/unfold/css/styles.css HTTP/1.1" 200 255002
+"GET /static/unfold/js/htmx/htmx.js HTTP/1.1" 200 50918
+"GET /static/unfold/js/alpine/alpine.resize.js HTTP/1.1" 200 703
+"GET /static/unfold/js/chart/chart.js HTTP/1.1" 200 200633
+"GET /static/unfold/js/app.js HTTP/1.1" 200 19428
+"GET /static/unfold/js/simplebar/simplebar.js HTTP/1.1" 200 27176
+"GET /static/unfold/fonts/inter/Inter-SemiBold.woff2 HTTP/1.1" 200 114812
+"GET /static/unfold/fonts/inter/Inter-Regular.woff2 HTTP/1.1" 200 111268
+"GET /static/unfold/fonts/inter/Inter-Medium.woff2 HTTP/1.1" 200 114348
+"GET /static/unfold/fonts/material-symbols/Material-Symbols-Outlined.woff2 HTTP/1.1" 200 291696
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3543
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 12587
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 12580
+"GET /static/unfold/js/alpine/alpine.resize.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.anchor.js HTTP/1.1" 304 0
+"GET /static/unfold/js/chart/chart.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.sort.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.persist.js HTTP/1.1" 304 0
+"GET /static/unfold/js/app.js HTTP/1.1" 304 0
+"GET /static/unfold/js/htmx/htmx.js HTTP/1.1" 304 0
+"GET /static/unfold/js/simplebar/simplebar.js HTTP/1.1" 304 0
+"GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/simplebar/simplebar.css HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 12580
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 12579
+"GET /static/unfold/js/alpine/alpine.persist.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.sort.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.anchor.js HTTP/1.1" 304 0
+"GET /static/unfold/js/app.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.resize.js HTTP/1.1" 304 0
+"GET /static/unfold/js/simplebar/simplebar.js HTTP/1.1" 304 0
+"GET /static/unfold/js/chart/chart.js HTTP/1.1" 304 0
+"GET /static/unfold/js/htmx/htmx.js HTTP/1.1" 304 0
+"GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/simplebar/simplebar.css HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 12579
+Not Found: /
+"GET / HTTP/1.1" 404 3492
+"GET /api/docs HTTP/1.1" 301 0
+"GET /api/docs/ HTTP/1.1" 200 2158
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1187
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 177183
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 252451
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1510271
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /api/docs/?format=openapi HTTP/1.1" 200 137676
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 11649
+"GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/simplebar/simplebar.css HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.anchor.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.persist.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.sort.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.resize.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.js HTTP/1.1" 304 0
+"GET /static/unfold/js/htmx/htmx.js HTTP/1.1" 304 0
+"GET /static/unfold/js/chart/chart.js HTTP/1.1" 304 0
+"GET /static/unfold/js/app.js HTTP/1.1" 304 0
+"GET /static/unfold/js/simplebar/simplebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 12568
+Watching for file changes with StatReloader
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 64588
+"GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/simplebar/simplebar.css HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.anchor.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.persist.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.sort.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.resize.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.js HTTP/1.1" 304 0
+"GET /static/unfold/js/htmx/htmx.js HTTP/1.1" 304 0
+"GET /static/unfold/js/chart/chart.js HTTP/1.1" 304 0
+"GET /static/unfold/js/app.js HTTP/1.1" 304 0
+"GET /static/unfold/js/simplebar/simplebar.js HTTP/1.1" 304 0
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"GET /static/images/logo-dark.svg HTTP/1.1" 404 1920
+"GET /admin/ HTTP/1.1" 200 64588
+"GET /static/unfold/fonts/inter/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/css/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/fonts/material-symbols/styles.css HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.sort.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.resize.js HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.anchor.js HTTP/1.1" 304 0
+"GET /static/unfold/css/simplebar/simplebar.css HTTP/1.1" 304 0
+"GET /static/unfold/js/alpine/alpine.persist.js HTTP/1.1" 304 0
+"GET /static/unfold/js/htmx/htmx.js HTTP/1.1" 304 0
+"GET /static/unfold/js/app.js HTTP/1.1" 304 0
+"GET /static/unfold/js/chart/chart.js HTTP/1.1" 304 0
+"GET /static/unfold/js/simplebar/simplebar.js HTTP/1.1" 304 0
+"GET /static/images/logo-dark.svg HTTP/1.1" 404 1920
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"GET /static/images/logo-dark.svg HTTP/1.1" 404 1920
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"GET /admin/ HTTP/1.1" 200 64588
+"GET /static/images/logo-dark.svg HTTP/1.1" 404 1920
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"GET /admin/fati_accounts/permission/ HTTP/1.1" 200 50937
+"GET /static/admin/js/core.js HTTP/1.1" 200 5682
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/actions.js HTTP/1.1" 200 7977
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9222
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+"GET /admin/jsi18n/ HTTP/1.1" 200 8621
+"GET /static/images/logo-dark.svg HTTP/1.1" 404 1920
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"GET /admin/ HTTP/1.1" 200 64588
+"GET /static/images/logo-dark.svg HTTP/1.1" 404 1920
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+/home/cardan/Pictures/pro_suivi/plateforme/fati-backend/fati_backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/cardan/Pictures/pro_suivi/plateforme/fati-backend/fati_backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 200 49757
+"GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+"GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+"GET /static/vendor/bootswatch/cerulean/bootstrap.min.css HTTP/1.1" 200 163350
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+"GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+"GET /static/images/favicon.ico HTTP/1.1" 404 1914
+"GET /admin/fati_geography/department/ HTTP/1.1" 200 53412
+"GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+"GET /static/vendor/bootswatch/cerulean/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+"GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+"GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+"GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 8621
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"GET /static/images/logo.svg HTTP/1.1" 404 1905
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517

@@ -13,8 +13,7 @@ djangorestframework-gis>=1.0
 # Database
 psycopg2-binary>=2.9.9
 
-# GeoDjango
-GDAL>=3.0.0
+
 
 # API Documentation
 drf-yasg>=1.21.0
