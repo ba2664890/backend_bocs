@@ -1,0 +1,75 @@
+"""
+FATI Data Collection - Admin Configuration
+"""
+from django.contrib import admin
+from .models import DataCollection, DataSubmission, DataEntry, FormTemplate
+
+
+class DataPointInline(admin.TabularInline):
+    """Inline pour les points de données"""
+    model = DataPoint
+    extra = 0
+    fields = [
+        'indicator', 'region', 'value',
+        'status', 'validated_by'
+    ]
+    readonly_fields = ['created_at']
+
+
+@admin.register(DataCollectionSession)
+class DataCollectionSessionAdmin(admin.ModelAdmin):
+    """Configuration admin pour les sessions de collecte"""
+    
+    list_display = [
+        'name', 'period', 'assigned_to',
+        'status', 'progress', 'due_date', 'created_at'
+    ]
+    list_filter = ['status', 'period', 'created_at']
+    search_fields = ['name', 'description', 'assigned_to__email']
+    ordering = ['-created_at']
+    
+    fieldsets = (
+        ('Informations', {
+            'fields': ('name', 'description', 'period')
+        }),
+        ('Assignation', {
+            'fields': ('assigned_to', 'assigned_region')
+        }),
+        ('Statut', {
+            'fields': ('status', 'progress')
+        }),
+        ('Dates', {
+            'fields': ('due_date', 'completed_at', 'created_at')
+        }),
+    )
+    
+    readonly_fields = ['created_at', 'completed_at']
+    inlines = [DataPointInline]
+
+
+@admin.register(DataPoint)
+class DataPointAdmin(admin.ModelAdmin):
+    """Configuration admin pour les points de données"""
+    
+    list_display = [
+        'indicator', 'region', 'value',
+        'status', 'session', 'created_at'
+    ]
+    list_filter = ['status', 'indicator__sector', 'region']
+    search_fields = [
+        'indicator__name', 'region__name',
+        'notes', 'session__name'
+    ]
+    ordering = ['-created_at']
+
+
+@admin.register(DataValidationRule)
+class DataValidationRuleAdmin(admin.ModelAdmin):
+    """Configuration admin pour les règles de validation"""
+    
+    list_display = [
+        'name', 'indicator', 'rule_type',
+        'is_active', 'created_at'
+    ]
+    list_filter = ['rule_type', 'is_active']
+    search_fields = ['name', 'indicator__name']

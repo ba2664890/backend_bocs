@@ -1,0 +1,81 @@
+"""
+FATI Facilities - Admin Configuration
+"""
+from django.contrib import admin
+from django.contrib.gis.admin import GISModelAdmin
+from .models import FacilityType, Facility, FacilityContact
+
+
+class FacilityContactInline(admin.TabularInline):
+    """Inline pour les contacts de structure"""
+    model = FacilityContact
+    extra = 1
+
+
+@admin.register(FacilityType)
+class FacilityTypeAdmin(admin.ModelAdmin):
+    """Configuration admin pour les types de structure"""
+    
+    list_display = ['name', 'sector', 'code', 'is_active']
+    list_filter = ['sector', 'is_active']
+    search_fields = ['name', 'code', 'description']
+
+
+@admin.register(Facility)
+class FacilityAdmin(GISModelAdmin):
+    """Configuration admin pour les structures"""
+    
+    list_display = [
+        'name', 'type', 'region', 'department',
+        'status', 'is_active', 'created_at'
+    ]
+    list_filter = [
+        'type__sector', 'type', 'status',
+        'region', 'is_active'
+    ]
+    search_fields = [
+        'name', 'code', 'address',
+        'region__name', 'department__name'
+    ]
+    ordering = ['name']
+    
+    fieldsets = (
+        ('Informations générales', {
+            'fields': ('name', 'code', 'type', 'status')
+        }),
+        ('Localisation', {
+            'fields': (
+                'region', 'department', 'commune',
+                'address', 'location'
+            )
+        }),
+        ('Capacités', {
+            'fields': (
+                'capacity', 'current_occupation',
+                'operating_hours', 'services'
+            )
+        }),
+        ('Métadonnées', {
+            'fields': ('is_active', 'created_at', 'updated_at')
+        }),
+    )
+    
+    readonly_fields = ['created_at', 'updated_at']
+    inlines = [FacilityContactInline]
+    
+    gis_widget_kwargs = {
+        'attrs': {
+            'default_zoom': 10,
+            'default_lon': -14.5,
+            'default_lat': 14.5,
+        }
+    }
+
+
+@admin.register(FacilityContact)
+class FacilityContactAdmin(admin.ModelAdmin):
+    """Configuration admin pour les contacts"""
+    
+    list_display = ['name', 'facility', 'role', 'phone', 'email', 'is_primary']
+    list_filter = ['role', 'is_primary']
+    search_fields = ['name', 'facility__name', 'phone', 'email']

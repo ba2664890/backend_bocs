@@ -1,0 +1,598 @@
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+"GET / HTTP/1.1" 400 77231
+Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/utils/deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/http/request.py", line 150, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: '0.0.0.0:8000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+"GET /favicon.ico HTTP/1.1" 400 77282
+Watching for file changes with StatReloader
+"OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+Not Found: /api/auth/login/
+"POST /api/auth/login/ HTTP/1.1" 404 9123
+Not Found: /api/auth/login/
+"POST /api/auth/login/ HTTP/1.1" 404 9123
+Not Found: /api/auth/login/
+"POST /api/auth/login/ HTTP/1.1" 404 9123
+"OPTIONS /api/auth/users/login/ HTTP/1.1" 200 0
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Bad Request: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 400 50
+Bad Request: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 400 50
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Bad Request: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 400 50
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+"POST /api/auth/users/login/ HTTP/1.1" 200 546
+"OPTIONS /api/auth/users/login/ HTTP/1.1" 200 0
+"POST /api/auth/users/login/ HTTP/1.1" 200 546
+Not Found: /
+"GET / HTTP/1.1" 404 3492
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3543
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4242
+"GET /static/admin/css/base.css HTTP/1.1" 200 21310
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 16657
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /admin/fati_accounts/user/add/ HTTP/1.1" 200 19204
+"GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+"GET /static/admin/js/core.js HTTP/1.1" 200 5682
+"GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11921
+"GET /admin/jsi18n/ HTTP/1.1" 200 8621
+"POST /admin/fati_accounts/user/add/ HTTP/1.1" 200 19399
+"GET /admin/jsi18n/ HTTP/1.1" 200 8621
+"POST /admin/fati_accounts/user/add/ HTTP/1.1" 200 19413
+"GET /admin/jsi18n/ HTTP/1.1" 200 8621
+"POST /admin/fati_accounts/user/add/ HTTP/1.1" 302 0
+"GET /admin/fati_accounts/user/2/change/ HTTP/1.1" 200 43568
+"GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+"GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15292
+"GET /admin/jsi18n/ HTTP/1.1" 200 8621
+"GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+"GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+"POST /admin/fati_accounts/user/2/change/ HTTP/1.1" 302 0
+"GET /admin/fati_accounts/user/ HTTP/1.1" 200 20997
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /admin/jsi18n/ HTTP/1.1" 200 8621
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"OPTIONS /api/auth/users/logout/ HTTP/1.1" 200 0
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+Unauthorized: /api/auth/users/logout/
+"POST /api/auth/users/logout/ HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+"POST /api/auth/users/login/ HTTP/1.1" 200 546
+/home/cardan/Pictures/pro_suivi/plateforme/fati-backend/fati_backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/auth/users/login/ HTTP/1.1" 200 571
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"OPTIONS /api/auth/users/ HTTP/1.1" 200 0
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"OPTIONS /api/indicators/values/?page_size=1000 HTTP/1.1" 200 0
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 52
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12277
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"OPTIONS /api/facilities/health/?page_size=1000 HTTP/1.1" 200 0
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"OPTIONS /api/facilities/health/?page_size=1000 HTTP/1.1" 200 0
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"OPTIONS /api/facilities/health/?page_size=1000 HTTP/1.1" 200 0
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+"OPTIONS /api/indicators/values/?page_size=1000 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/ HTTP/1.1" 200 0
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/auth/users/
+Unauthorized: /api/indicators/values/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+Unauthorized: /api/workflows/alerts/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/auth/users/
+Unauthorized: /api/indicators/values/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/auth/users/
+Unauthorized: /api/indicators/values/
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/indicators/values/
+Unauthorized: /api/auth/users/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+"GET /api/workflows/alerts/ HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/ HTTP/1.1" 401 30
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/ HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+Unauthorized: /api/auth/users/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/auth/users/ HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"OPTIONS /api/auth/users/?page_size=100 HTTP/1.1" 200 0
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+Unauthorized: /api/auth/users/
+Unauthorized: /api/workflows/alerts/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"OPTIONS /api/auth/users/logout/ HTTP/1.1" 200 0
+Unauthorized: /api/auth/users/logout/
+"POST /api/auth/users/logout/ HTTP/1.1" 401 30
+"OPTIONS /api/auth/users/login/ HTTP/1.1" 200 0
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4242
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+"GET /static/admin/css/base.css HTTP/1.1" 200 21310
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3543
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4473
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4464
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Bad Request: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 400 86
+Bad Request: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 400 86
+"POST /api/auth/users/login/ HTTP/1.1" 200 546
+"OPTIONS /api/facilities/health/?page_size=1000 HTTP/1.1" 200 0
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"OPTIONS /api/collections/collections/?page_size=100 HTTP/1.1" 200 0
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/collections/collections/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+Unauthorized: /api/auth/users/logout/
+"POST /api/auth/users/logout/ HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+Unauthorized: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 401 34
+"POST /api/auth/users/login/ HTTP/1.1" 200 546
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /admin/fati_accounts/user/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 4280
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+"GET /static/admin/css/base.css HTTP/1.1" 200 21310
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 200 958
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18559
+"POST /admin/login/?next=/admin/fati_accounts/user/ HTTP/1.1" 200 4519
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/auth/users/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/indicators/values/
+Unauthorized: /api/auth/users/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"OPTIONS /api/auth/users/?page_size=100 HTTP/1.1" 200 0
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
