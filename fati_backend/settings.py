@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'fati_backend.wsgi.application'
 # Database - PostgreSQL with PostGIS
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', f'postgres://{os.environ.get("DB_USER", "fati_user")}:{os.environ.get("DB_PASSWORD", "fati_password")}@{os.environ.get("DB_HOST", "localhost")}:{os.environ.get("DB_PORT", "5432")}/{os.environ.get("DB_NAME", "fati_db")}'),
+        default='postgresql://neondb_owner:npg_zKuQSEG0Z9lr@ep-young-shape-aheybnnb-pooler.c-3.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require',
         conn_max_age=600,
         conn_health_checks=True,
     )
