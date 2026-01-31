@@ -23,6 +23,11 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
+# Customisation de l'interface d'administration
+admin.site.site_header = "FATI - Administration"
+admin.site.site_title = "Portail FATI"
+admin.site.index_title = "Gestion de la plateforme territoriale"
+
 urlpatterns = [
     # Admin Django
     path('admin/', admin.site.urls),
