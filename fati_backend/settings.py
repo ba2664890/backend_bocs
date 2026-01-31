@@ -6,6 +6,8 @@ Fond d'Analyse Territoriale Intégrée
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+from django.templatetags.static import static
+from django.urls import reverse_lazy
 
 # Load environment variables from .env file
 load_dotenv()
@@ -24,6 +26,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(','
 # Application definition
 INSTALLED_APPS = [
     # Django core
+    "unfold",  # Django Unfold
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -92,15 +95,7 @@ DATABASES = {
     }
 }
 
-# For development (SQLite fallback)
-# SQLite fallback removed to enforce PostgreSQL (Neon) usage
-# if os.environ.get('USE_SQLITE', 'False').lower() == 'true':
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -204,3 +199,47 @@ LOGGING = {
 
 # Create logs directory if it doesn't exist
 os.makedirs(BASE_DIR / 'logs', exist_ok=True)
+
+# Django Unfold Configuration
+UNFOLD = {
+    "SITE_TITLE": "Portail FATI",
+    "SITE_HEADER": "FATI - Administration",
+    "SITE_URL": "/",
+    "SITE_ICON": {
+        "light": lambda request: static("images/logo.svg"),  # light mode
+        "dark": lambda request: static("images/logo-dark.svg"),  # dark mode
+    },
+    "COLORS": {
+        "primary": {
+            "50": "240 253 244",
+            "100": "220 252 231",
+            "200": "187 247 208",
+            "300": "134 239 172",
+            "400": "74 222 128",
+            "500": "34 197 94",
+            "600": "22 163 74",
+            "700": "21 128 61",
+            "800": "22 101 52",
+            "900": "20 83 45",
+            "950": "5 46 22",
+        },
+    },
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": True,
+        "navigation": [
+            {
+                "title": "Navigation",
+                "separator": True,
+                "collapsible": False,
+                "items": [
+                    {
+                        "title": "Tableau de bord",
+                        "icon": "dashboard",
+                        "link": reverse_lazy("admin:index"),
+                    },
+                ],
+            },
+        ],
+    },
+}
