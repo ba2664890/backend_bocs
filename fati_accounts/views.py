@@ -85,6 +85,11 @@ class UserViewSet(viewsets.ModelViewSet):
         # Créer ou récupérer le token
         token, created = Token.objects.get_or_create(user=user)
         
+        return Response({
+            'token': token.key,
+            'user': UserSerializer(user).data
+        })
+        
     @action(detail=False, methods=['post'], permission_classes=[permissions.AllowAny])
     def register(self, request):
         """Création d'un nouveau compte utilisateur"""

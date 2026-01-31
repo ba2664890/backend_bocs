@@ -710,3 +710,87 @@ Watching for file changes with StatReloader
 "GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
 "GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
 "GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/facilities/health/?page_size=1000 HTTP/1.1" 200 10705
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 2516
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/workflows/alerts/
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+"OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/auth/users/
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/auth/users/
+Unauthorized: /api/indicators/values/
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 401 30
+Unauthorized: /api/workflows/alerts/
+Unauthorized: /api/workflows/alerts/
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 401 30
+"OPTIONS /api/auth/users/register/ HTTP/1.1" 200 0
+"POST /api/auth/users/register/ HTTP/1.1" 201 547
+"OPTIONS /api/collections/collections/?page_size=100 HTTP/1.1" 200 0
+"GET /api/collections/collections/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 52
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+Bad Request: /api/auth/users/login/
+"POST /api/auth/users/login/ HTTP/1.1" 400 86
+Internal Server Error: /api/auth/users/login/
+Traceback (most recent call last):
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/cardan/.local/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cardan/.local/lib/python3.10/site-packages/rest_framework/views.py", line 517, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/cardan/.local/lib/python3.10/site-packages/rest_framework/views.py", line 429, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+"POST /api/auth/users/login/ HTTP/1.1" 500 89372
+Internal Server Error: /api/auth/users/login/
+Traceback (most recent call last):
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/cardan/.local/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/cardan/.local/lib/python3.10/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/cardan/.local/lib/python3.10/site-packages/rest_framework/views.py", line 517, in dispatch
+    self.response = self.finalize_resp"POST /api/auth/users/login/ HTTP/1.1" 200 546
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 3029
+"GET /api/indicators/values/?page_size=1000 HTTP/1.1" 200 12450
+"GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+"POST /api/auth/users/login/ HTTP/1.1" 200 546
+"GET /api/auth/users/?page_size=100 HTTP/1.1" 200 3029
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
+"POST /api/auth/users/register/ HTTP/1.1" 201 548
+"GET /api/collections/collections/?page_size=100 HTTP/1.1" 200 52
+"POST /api/auth/users/logout/ HTTP/1.1" 200 35
