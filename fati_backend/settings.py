@@ -6,8 +6,6 @@ Fond d'Analyse Territoriale Intégrée
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-from django.templatetags.static import static
-from django.urls import reverse_lazy
 
 # Load environment variables from .env file
 load_dotenv()
@@ -26,7 +24,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(','
 # Application definition
 INSTALLED_APPS = [
     # Django core
-    "unfold",  # Django Unfold
+    "jazzmin",  # Django Jazzmin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -201,45 +199,69 @@ LOGGING = {
 os.makedirs(BASE_DIR / 'logs', exist_ok=True)
 
 # Django Unfold Configuration
-UNFOLD = {
-    "SITE_TITLE": "Portail FATI",
-    "SITE_HEADER": "FATI - Administration",
-    "SITE_URL": "/",
-    "SITE_ICON": {
-        "light": lambda request: static("images/logo.svg"),  # light mode
-        "dark": lambda request: static("images/logo-dark.svg"),  # dark mode
+# Django Jazzmin Configuration
+JAZZMIN_SETTINGS = {
+    "site_title": "Portail FATI",
+    "site_header": "FATI - Administration",
+    "site_brand": "FATI Admin",
+    "site_logo": "images/logo.svg",
+    "login_logo": "images/logo.svg",
+    "login_logo_dark": "images/logo.svg",
+    "site_logo_classes": "img-circle",
+    "site_icon": "images/favicon.ico",
+    "welcome_sign": "Bienvenue sur le portail d'administration FATI",
+    "copyright": "FATI - République du Sénégal",
+    "search_model": "fati_accounts.User",
+    "user_avatar": None,
+    # Top Menu
+    "topmenu_links": [
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "Support", "url": "https://fati.gov.sn/support", "new_window": True},
+        {"model": "fati_accounts.User"},
+    ],
+    # User Menu
+    "usermenu_links": [
+        {"name": "Support", "url": "https://fati.gov.sn/support", "new_window": True},
+        {"model": "fati_accounts.User"}
+    ],
+    # Side Menu
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "hide_models": [],
+    "order_with_respect_to": ["fati_accounts", "fati_geography", "fati_indicators"],
+    # Icons (FontAwesome)
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "fati_accounts.User": "fas fa-user",
+        "fati_geography.Region": "fas fa-map",
+        "fati_geography.Department": "fas fa-map-marker-alt",
     },
-    "COLORS": {
-        "primary": {
-            "50": "240 253 244",
-            "100": "220 252 231",
-            "200": "187 247 208",
-            "300": "134 239 172",
-            "400": "74 222 128",
-            "500": "34 197 94",
-            "600": "22 163 74",
-            "700": "21 128 61",
-            "800": "22 101 52",
-            "900": "20 83 45",
-            "950": "5 46 22",
-        },
-    },
-    "SIDEBAR": {
-        "show_search": True,
-        "show_all_applications": True,
-        "navigation": [
-            {
-                "title": "Navigation",
-                "separator": True,
-                "collapsible": False,
-                "items": [
-                    {
-                        "title": "Tableau de bord",
-                        "icon": "dashboard",
-                        "link": reverse_lazy("admin:index"),
-                    },
-                ],
-            },
-        ],
-    },
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
+    "related_modal_active": False,
+    "custom_css": None,
+    "custom_js": None,
+    "use_google_fonts_cdn": True,
+    "show_ui_builder": False,
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": "navbar-success",
+    "accent": "accent-success",
+    "navbar": "navbar-success navbar-dark",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": True,
+    "sidebar": "sidebar-light-success",
+    "sidebar_nav_small_text": False,
+    "theme": "cerulean",
 }
