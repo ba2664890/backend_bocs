@@ -20,11 +20,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key-change-in-pro
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,https://projetstatagricole-production.up.railway.app').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,projetstatagricole-production.up.railway.app').split(',')
 
 CSRF_TRUSTED_ORIGINS = [
     'https://projetstatagricole-production.up.railway.app',
-    'https://projet-bocs-app-hhrb.vercel.app',
+    'https://projet-bocs-app.vercel.app',
 ]
 
 # Application definition
@@ -166,7 +166,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:3000",
     "http://127.0.0.1:5173",
-    "https://projet-bocs-app-hhrb.vercel.app",
+    "https://projet-bocs-app.vercel.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
