@@ -18,6 +18,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         SECTOR_EDUCATION = 'sector_education', _('Secteur Éducation')
         LOCAL_MANAGER = 'local_manager', _('Responsable Local')
         CONTRIBUTOR = 'contributor', _('Contributeur')
+        ANNONCEUR = 'annonceur', _('Annonceur')
         VIEWER = 'viewer', _('Lecteur')
     
     class Status(models.TextChoices):
