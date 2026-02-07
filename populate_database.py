@@ -492,8 +492,8 @@ def populate_users():
     print("\n👥 Création des utilisateurs...")
     
     users_data = [
-        {'email': 'sante@fati.gov', 'first_name': 'Dr. Aminata', 'last_name': 'Diop', 'role': 'sector_health', 'organization': 'Ministère de la Santé'},
-        {'email': 'education@fati.gov', 'first_name': 'Prof. Mamadou', 'last_name': 'Sall', 'role': 'sector_education', 'organization': 'Ministère de l\'Éducation'},
+        {'email': 'acteur@fati.gov', 'first_name': 'Dr. Aminata', 'last_name': 'Diop', 'role': 'local_manager', 'organization': 'Ministère de la Santé'},
+        {'email': 'population@fati.gov', 'first_name': 'Prof. Mamadou', 'last_name': 'Sall', 'role': 'annonceur', 'organization': 'Ministère de l\'Éducation'},
     ]
     
     for user_data in users_data:

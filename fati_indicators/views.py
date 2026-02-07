@@ -144,7 +144,7 @@ class IndicatorValueViewSet(viewsets.ModelViewSet):
         
         # Vérifier les permissions
         if not (request.user.is_admin or request.user.is_institution or 
-                request.user.role in ['sector_health', 'sector_education']):
+                request.user.is_local_manager):
             return Response(
                 {'error': 'Permission refusée'},
                 status=status.HTTP_403_FORBIDDEN

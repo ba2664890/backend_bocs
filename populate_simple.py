@@ -241,8 +241,8 @@ def create_users_and_alerts():
     print("\n👥 Création des utilisateurs...")
     
     users_data = [
-        {'email': 'sante@fati.gov', 'first_name': 'Dr. Aminata', 'last_name': 'Diop', 'role': 'sector_health'},
-        {'email': 'education@fati.gov', 'first_name': 'Prof. Mamadou', 'last_name': 'Sall', 'role': 'sector_education'},
+        {'email': 'actor@fati.gov', 'first_name': 'Dr. Aminata', 'last_name': 'Diop', 'role': 'local_manager'},
+        {'email': 'population@fati.gov', 'first_name': 'Prof. Mamadou', 'last_name': 'Sall', 'role': 'annonceur'},
     ]
     
     for user_data in users_data:

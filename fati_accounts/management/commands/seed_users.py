@@ -19,19 +19,19 @@ class Command(BaseCommand):
             'phone': '+221 77 123 45 67'
         },
         {
-            'email': 'sante@fati.gov.sn',
+            'email': 'acteur@fati.gov.sn',
             'password': 'test123',
-            'first_name': 'Responsable',
-            'last_name': 'Santé',
-            'role': 'sector_health',
+            'first_name': 'Personne',
+            'last_name': 'Habilitée',
+            'role': 'local_manager',
             'phone': '+221 77 234 56 78'
         },
         {
-            'email': 'education@fati.gov.sn',
+            'email': 'population@fati.gov.sn',
             'password': 'test123',
-            'first_name': 'Responsable',
-            'last_name': 'Éducation',
-            'role': 'sector_education',
+            'first_name': 'Annonceur',
+            'last_name': 'Population',
+            'role': 'annonceur',
             'phone': '+221 77 345 67 89'
         },
         {

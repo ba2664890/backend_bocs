@@ -28,6 +28,8 @@ COPY . .
 # Créer les répertoires nécessaires
 RUN mkdir -p media staticfiles logs
 
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 # Exposer le port
 EXPOSE 8000
 

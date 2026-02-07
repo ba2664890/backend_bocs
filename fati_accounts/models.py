@@ -14,8 +14,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Role(models.TextChoices):
         ADMIN = 'admin', _('Administrateur')
         INSTITUTION = 'institution', _('Institution')
-        SECTOR_HEALTH = 'sector_health', _('Secteur Santé')
-        SECTOR_EDUCATION = 'sector_education', _('Secteur Éducation')
         LOCAL_MANAGER = 'local_manager', _('Responsable Local')
         CONTRIBUTOR = 'contributor', _('Contributeur')
         ANNONCEUR = 'annonceur', _('Annonceur')
@@ -125,16 +123,24 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.role == self.Role.INSTITUTION
     
     @property
-    def is_sector_user(self):
-        return self.role in [self.Role.SECTOR_HEALTH, self.Role.SECTOR_EDUCATION]
-    
-    @property
     def is_local_manager(self):
         return self.role == self.Role.LOCAL_MANAGER
     
     @property
     def is_contributor(self):
         return self.role == self.Role.CONTRIBUTOR
+    
+    @property
+    def is_government(self):
+        return self.role == self.Role.INSTITUTION
+    
+    @property
+    def is_actor(self):
+        return self.role == self.Role.LOCAL_MANAGER
+    
+    @property
+    def is_population(self):
+        return self.role == self.Role.ANNONCEUR
 
 
 class Permission(models.Model):
