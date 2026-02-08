@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 class Region(models.Model):
     """Région administrative"""
     
-    code = models.CharField(_('code'), max_length=10, unique=True)
+    code = models.CharField(_('code'), max_length=50, unique=True)
     name = models.CharField(_('nom'), max_length=100)
     
     # Géométrie
@@ -51,7 +51,7 @@ class Region(models.Model):
 class Department(models.Model):
     """Département administratif"""
     
-    code = models.CharField(_('code'), max_length=10, unique=True)
+    code = models.CharField(_('code'), max_length=50, unique=True)
     name = models.CharField(_('nom'), max_length=100)
     
     # Relations
@@ -97,7 +97,7 @@ class Department(models.Model):
 class Commune(models.Model):
     """Commune administrative"""
     
-    code = models.CharField(_('code'), max_length=10, unique=True)
+    code = models.CharField(_('code'), max_length=50, unique=True)
     name = models.CharField(_('nom'), max_length=100)
     
     # Relations

@@ -1035,3 +1035,4 @@ Watching for file changes with StatReloader
 "OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
 "OPTIONS /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 0
 "GET /api/workflows/alerts/?page_size=100 HTTP/1.1" 200 5517
+GDAL_ERROR 1: b'JSON parsing error: unexpected character (at offset 43)'
