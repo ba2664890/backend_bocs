@@ -43,14 +43,6 @@ class Command(BaseCommand):
             'phone': '+221 77 456 78 90'
         },
         {
-            'email': 'contributeur@fati.gov.sn',
-            'password': 'test123',
-            'first_name': 'Contributeur',
-            'last_name': 'Terrain',
-            'role': 'contributor',
-            'phone': '+221 77 567 89 01'
-        },
-        {
             'email': 'lecteur@fati.gov.sn',
             'password': 'test123',
             'first_name': 'Utilisateur',

@@ -49,7 +49,7 @@ class UserViewSet(viewsets.ModelViewSet):
         # Institution voit les utilisateurs de son niveau et en dessous
         if user.is_institution:
             return User.objects.filter(role__in=[
-                'institution', 'local_manager', 'contributor', 'annonceur'
+                'institution', 'local_manager', 'annonceur'
             ])
         
         # Les autres ne voient que leur profil

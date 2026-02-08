@@ -13,7 +13,6 @@ class Dashboard(models.Model):
         HEALTH = 'health', _('Santé')
         EDUCATION = 'education', _('Éducation')
         ADMIN = 'admin', _('Administration')
-        CONTRIBUTOR = 'contributor', _('Contributeur')
     
     name = models.CharField(_('nom'), max_length=255)
     description = models.TextField(_('description'), blank=True)

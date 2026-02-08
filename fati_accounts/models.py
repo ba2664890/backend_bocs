@@ -15,7 +15,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         ADMIN = 'admin', _('Administrateur')
         INSTITUTION = 'institution', _('Institution')
         LOCAL_MANAGER = 'local_manager', _('Responsable Local')
-        CONTRIBUTOR = 'contributor', _('Contributeur')
         ANNONCEUR = 'annonceur', _('Annonceur')
         VIEWER = 'viewer', _('Lecteur')
     
@@ -125,10 +124,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     @property
     def is_local_manager(self):
         return self.role == self.Role.LOCAL_MANAGER
-    
-    @property
-    def is_contributor(self):
-        return self.role == self.Role.CONTRIBUTOR
     
     @property
     def is_government(self):

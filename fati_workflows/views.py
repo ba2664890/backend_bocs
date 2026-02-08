@@ -55,7 +55,7 @@ class WorkflowInstanceViewSet(viewsets.ModelViewSet):
                 workflow=instance,
                 name=step_config.get('name', f'Étape {i + 1}'),
                 order=i,
-                assigned_role=step_config.get('role', 'contributor')
+                assigned_role=step_config.get('role', 'local_manager')
             )
     
     @action(detail=True, methods=['post'])

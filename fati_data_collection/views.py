@@ -72,7 +72,7 @@ class DataSubmissionViewSet(viewsets.ModelViewSet):
         user = self.request.user
         queryset = self.queryset
         
-        if user.is_contributor or user.is_local_manager:
+        if user.is_local_manager:
             if user.assigned_commune:
                 queryset = queryset.filter(commune=user.assigned_commune)
             elif user.assigned_department:
