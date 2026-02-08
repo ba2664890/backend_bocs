@@ -6,7 +6,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class DataCollection(models.Model):
-    """Campagne de collecte de données"""
+    """Cycle de collecte de données"""
     
     class Status(models.TextChoices):
         PLANNED = 'planned', _('Planifiée')
@@ -86,8 +86,8 @@ class DataCollection(models.Model):
     updated_at = models.DateTimeField(_('modifié le'), auto_now=True)
     
     class Meta:
-        verbose_name = _('collecte de données')
-        verbose_name_plural = _('collectes de données')
+        verbose_name = _('cycle de collecte')
+        verbose_name_plural = _('cycles de collecte')
         ordering = ['-start_date']
     
     def __str__(self):

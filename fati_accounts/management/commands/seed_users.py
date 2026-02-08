@@ -13,24 +13,24 @@ class Command(BaseCommand):
         {
             'email': 'institution@fati.gov.sn',
             'password': 'test123',
-            'first_name': 'Directeur',
-            'last_name': 'Institution',
+            'first_name': 'Haut',
+            'last_name': 'Décideur',
             'role': 'institution',
             'phone': '+221 77 123 45 67'
         },
         {
             'email': 'acteur@fati.gov.sn',
             'password': 'test123',
-            'first_name': 'Personne',
-            'last_name': 'Habilitée',
+            'first_name': 'Agent',
+            'last_name': 'Terrain',
             'role': 'local_manager',
             'phone': '+221 77 234 56 78'
         },
         {
             'email': 'population@fati.gov.sn',
             'password': 'test123',
-            'first_name': 'Annonceur',
-            'last_name': 'Population',
+            'first_name': 'Citoyen',
+            'last_name': 'Public',
             'role': 'annonceur',
             'phone': '+221 77 345 67 89'
         },

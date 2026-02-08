@@ -13,9 +13,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     
     class Role(models.TextChoices):
         ADMIN = 'admin', _('Administrateur')
-        INSTITUTION = 'institution', _('Institution')
-        LOCAL_MANAGER = 'local_manager', _('Responsable Local')
-        ANNONCEUR = 'annonceur', _('Annonceur')
+        INSTITUTION = 'institution', _('Décideur')
+        LOCAL_MANAGER = 'local_manager', _('Agent de saisie')
+        ANNONCEUR = 'annonceur', _('Public')
         VIEWER = 'viewer', _('Lecteur')
     
     class Status(models.TextChoices):
@@ -118,23 +118,15 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.role == self.Role.ADMIN
     
     @property
-    def is_institution(self):
+    def is_decider(self):
         return self.role == self.Role.INSTITUTION
     
     @property
-    def is_local_manager(self):
+    def is_agent(self):
         return self.role == self.Role.LOCAL_MANAGER
     
     @property
-    def is_government(self):
-        return self.role == self.Role.INSTITUTION
-    
-    @property
-    def is_actor(self):
-        return self.role == self.Role.LOCAL_MANAGER
-    
-    @property
-    def is_population(self):
+    def is_public(self):
         return self.role == self.Role.ANNONCEUR
 
 
