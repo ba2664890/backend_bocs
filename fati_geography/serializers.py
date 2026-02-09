@@ -31,7 +31,7 @@ class RegionListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Region
         fields = [
-            'id', 'code', 'name', 'centroid',
+            'id', 'code', 'name', 'centroid', 'geometry',
             'population', 'departments_count'
         ]
 
@@ -63,7 +63,7 @@ class DepartmentListSerializer(serializers.ModelSerializer):
         model = Department
         fields = [
             'id', 'code', 'name', 'region', 'region_name',
-            'centroid', 'population'
+            'centroid', 'geometry', 'population'
         ]
 
 
@@ -93,7 +93,7 @@ class CommuneListSerializer(serializers.ModelSerializer):
         model = Commune
         fields = [
             'id', 'code', 'name', 'department', 'department_name',
-            'centroid', 'population'
+            'centroid', 'geometry', 'population'
         ]
 
 
