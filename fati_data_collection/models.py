@@ -144,6 +144,15 @@ class DataSubmission(models.Model):
         related_name='data_submissions',
         verbose_name=_('commune')
     )
+
+    # Géolocalisation de la soumission
+    location = models.PointField(
+        _('localisation GPS'),
+        null=True,
+        blank=True,
+        srid=4326,
+        help_text=_('Position géographique au moment de la saisie')
+    )
     
     # Contributeur
     submitted_by = models.ForeignKey(

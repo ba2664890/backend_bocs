@@ -3,6 +3,7 @@ FATI Data Collection - Serializers
 """
 from rest_framework import serializers
 from .models import DataCollection, DataSubmission, DataEntry, FormTemplate
+from rest_framework_gis.serializers import GeoModelSerializer
 
 
 class DataCollectionSerializer(serializers.ModelSerializer):
@@ -84,7 +85,7 @@ class DataEntrySerializer(serializers.ModelSerializer):
         ]
 
 
-class DataSubmissionSerializer(serializers.ModelSerializer):
+class DataSubmissionSerializer(GeoModelSerializer):
     """Serializer pour les soumissions de données"""
     
     status_display = serializers.CharField(source='get_status_display', read_only=True)
@@ -119,6 +120,7 @@ class DataSubmissionSerializer(serializers.ModelSerializer):
             'submitted_at', 'reviewed_at',
             'reviewed_by', 'reviewed_by_name',
             'reviewer_notes',
+            'location',
             'entries_count',
             'created_at', 'updated_at'
         ]
