@@ -3,6 +3,7 @@ FATI Facilities - Serializers
 """
 from rest_framework import serializers
 from rest_framework_gis.serializers import GeoModelSerializer
+from rest_framework_gis.fields import GeometryField
 from .models import HealthFacility, EducationFacility, Equipment, Staff
 
 
@@ -23,6 +24,8 @@ class HealthFacilitySerializer(GeoModelSerializer):
     department_name = serializers.CharField(source='department.name', read_only=True)
     region_id = serializers.CharField(source='commune.department.region.id', read_only=True)
     region_name = serializers.CharField(source='region.name', read_only=True)
+    
+    location = GeometryField(required=False, allow_null=True)
     
     class Meta:
         model = HealthFacility
@@ -58,6 +61,8 @@ class EducationFacilitySerializer(GeoModelSerializer):
     department_name = serializers.CharField(source='department.name', read_only=True)
     region_id = serializers.CharField(source='commune.department.region.id', read_only=True)
     region_name = serializers.CharField(source='region.name', read_only=True)
+    
+    location = GeometryField(required=False, allow_null=True)
     
     class Meta:
         model = EducationFacility

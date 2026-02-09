@@ -3,6 +3,7 @@ FATI Geography - Serializers
 """
 from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer, GeoModelSerializer
+from rest_framework_gis.fields import GeometryField
 from .models import Region, Department, Commune
 
 
@@ -27,6 +28,9 @@ class RegionListSerializer(GeoModelSerializer):
     """Serializer simplifié pour les listes de régions"""
     
     departments_count = serializers.IntegerField(source='departments.count', read_only=True)
+    
+    centroid = GeometryField(read_only=True)
+    geometry = GeometryField(read_only=True)
     
     class Meta:
         model = Region
@@ -59,6 +63,9 @@ class DepartmentListSerializer(GeoModelSerializer):
     
     region_name = serializers.CharField(source='region.name', read_only=True)
     
+    centroid = GeometryField(read_only=True)
+    geometry = GeometryField(read_only=True)
+    
     class Meta:
         model = Department
         fields = [
@@ -88,6 +95,9 @@ class CommuneListSerializer(GeoModelSerializer):
     """Serializer simplifié pour les listes de communes"""
     
     department_name = serializers.CharField(source='department.name', read_only=True)
+    
+    centroid = GeometryField(read_only=True)
+    geometry = GeometryField(read_only=True)
     
     class Meta:
         model = Commune
