@@ -2,10 +2,11 @@
 FATI Facilities - Serializers
 """
 from rest_framework import serializers
+from rest_framework_gis.serializers import GeoModelSerializer
 from .models import HealthFacility, EducationFacility, Equipment, Staff
 
 
-class HealthFacilitySerializer(serializers.ModelSerializer):
+class HealthFacilitySerializer(GeoModelSerializer):
     """Serializer pour les structures de santé"""
     
     facility_type_display = serializers.CharField(
@@ -18,7 +19,9 @@ class HealthFacilitySerializer(serializers.ModelSerializer):
     )
     
     commune_name = serializers.CharField(source='commune.name', read_only=True)
+    department_id = serializers.CharField(source='commune.department.id', read_only=True)
     department_name = serializers.CharField(source='department.name', read_only=True)
+    region_id = serializers.CharField(source='commune.department.region.id', read_only=True)
     region_name = serializers.CharField(source='region.name', read_only=True)
     
     class Meta:
@@ -28,7 +31,8 @@ class HealthFacilitySerializer(serializers.ModelSerializer):
             'facility_type', 'facility_type_display',
             'category', 'category_display',
             'commune', 'commune_name',
-            'department_name', 'region_name',
+            'department_id', 'department_name',
+            'region_id', 'region_name',
             'location', 'address',
             'phone', 'email', 'manager_name',
             'bed_capacity', 'services',
@@ -37,7 +41,7 @@ class HealthFacilitySerializer(serializers.ModelSerializer):
         ]
 
 
-class EducationFacilitySerializer(serializers.ModelSerializer):
+class EducationFacilitySerializer(GeoModelSerializer):
     """Serializer pour les établissements d'enseignement"""
     
     facility_type_display = serializers.CharField(
@@ -50,7 +54,9 @@ class EducationFacilitySerializer(serializers.ModelSerializer):
     )
     
     commune_name = serializers.CharField(source='commune.name', read_only=True)
+    department_id = serializers.CharField(source='commune.department.id', read_only=True)
     department_name = serializers.CharField(source='department.name', read_only=True)
+    region_id = serializers.CharField(source='commune.department.region.id', read_only=True)
     region_name = serializers.CharField(source='region.name', read_only=True)
     
     class Meta:
@@ -60,7 +66,8 @@ class EducationFacilitySerializer(serializers.ModelSerializer):
             'facility_type', 'facility_type_display',
             'level', 'level_display',
             'commune', 'commune_name',
-            'department_name', 'region_name',
+            'department_id', 'department_name',
+            'region_id', 'region_name',
             'location', 'address',
             'phone', 'email', 'principal_name',
             'student_capacity',
