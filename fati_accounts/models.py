@@ -129,6 +129,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     def is_public(self):
         return self.role == self.Role.ANNONCEUR
 
+    @property
+    def is_institution(self):
+        return self.role == self.Role.INSTITUTION
+
+    @property
+    def is_local_manager(self):
+        return self.role == self.Role.LOCAL_MANAGER
+
 
 class Permission(models.Model):
     """Permissions personnalisées par rôle"""
