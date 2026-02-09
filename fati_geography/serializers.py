@@ -2,7 +2,7 @@
 FATI Geography - Serializers
 """
 from rest_framework import serializers
-from rest_framework_gis.serializers import GeoFeatureModelSerializer
+from rest_framework_gis.serializers import GeoFeatureModelSerializer, GeoModelSerializer
 from .models import Region, Department, Commune
 
 
@@ -23,7 +23,7 @@ class RegionSerializer(GeoFeatureModelSerializer):
         ]
 
 
-class RegionListSerializer(serializers.ModelSerializer):
+class RegionListSerializer(GeoModelSerializer):
     """Serializer simplifié pour les listes de régions"""
     
     departments_count = serializers.IntegerField(source='departments.count', read_only=True)
@@ -54,7 +54,7 @@ class DepartmentSerializer(GeoFeatureModelSerializer):
         ]
 
 
-class DepartmentListSerializer(serializers.ModelSerializer):
+class DepartmentListSerializer(GeoModelSerializer):
     """Serializer simplifié pour les listes de départements"""
     
     region_name = serializers.CharField(source='region.name', read_only=True)
@@ -84,7 +84,7 @@ class CommuneSerializer(GeoFeatureModelSerializer):
         ]
 
 
-class CommuneListSerializer(serializers.ModelSerializer):
+class CommuneListSerializer(GeoModelSerializer):
     """Serializer simplifié pour les listes de communes"""
     
     department_name = serializers.CharField(source='department.name', read_only=True)
