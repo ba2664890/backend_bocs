@@ -4,6 +4,8 @@ FATI Facilities - Serializers
 from rest_framework import serializers
 from rest_framework_gis.serializers import GeoModelSerializer
 from rest_framework_gis.fields import GeometryField
+from django.contrib.gis.geos import GEOSGeometry
+import json
 from .models import HealthFacility, EducationFacility, Equipment, Staff
 
 
@@ -43,6 +45,18 @@ class HealthFacilitySerializer(GeoModelSerializer):
             'created_at', 'updated_at'
         ]
 
+    def create(self, validated_data):
+        location_data = validated_data.get('location')
+        if location_data and isinstance(location_data, dict):
+            validated_data['location'] = GEOSGeometry(json.dumps(location_data))
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        location_data = validated_data.get('location')
+        if location_data and isinstance(location_data, dict):
+            validated_data['location'] = GEOSGeometry(json.dumps(location_data))
+        return super().update(instance, validated_data)
+
 
 class EducationFacilitySerializer(GeoModelSerializer):
     """Serializer pour les établissements d'enseignement"""
@@ -79,6 +93,18 @@ class EducationFacilitySerializer(GeoModelSerializer):
             'is_active',
             'created_at', 'updated_at'
         ]
+
+    def create(self, validated_data):
+        location_data = validated_data.get('location')
+        if location_data and isinstance(location_data, dict):
+            validated_data['location'] = GEOSGeometry(json.dumps(location_data))
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        location_data = validated_data.get('location')
+        if location_data and isinstance(location_data, dict):
+            validated_data['location'] = GEOSGeometry(json.dumps(location_data))
+        return super().update(instance, validated_data)
 
 
 class EquipmentSerializer(serializers.ModelSerializer):
