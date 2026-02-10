@@ -1,5 +1,5 @@
 """
-FATI Facilities - Modèles de structures (santé et éducation)
+FATI Facilities - Modèles de structures (santée et éducation)
 """
 from django.contrib.gis.db import models
 from django.utils.translation import gettext_lazy as _
