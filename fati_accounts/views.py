@@ -107,13 +107,20 @@ class UserViewSet(viewsets.ModelViewSet):
             'user': UserSerializer(user).data
         }, status=status.HTTP_201_CREATED)
     
-    @action(detail=False, methods=['post'], permission_classes=[permissions.IsAuthenticated])
+    @action(
+        detail=False,
+        methods=['post'],
+        permission_classes=[permissions.AllowAny],
+        authentication_classes=[]
+    )
     def logout(self, request):
         """Déconnexion d'un utilisateur"""
-        try:
-            request.user.auth_token.delete()
-        except:
-            pass
+        auth_header = request.headers.get('Authorization', '')
+        if auth_header.lower().startswith('token '):
+            token_key = auth_header.split(' ', 1)[1].strip()
+            Token.objects.filter(key=token_key).delete()
+        elif getattr(request.user, 'is_authenticated', False):
+            Token.objects.filter(user=request.user).delete()
         return Response({'message': 'Déconnexion réussie'})
     
     @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])

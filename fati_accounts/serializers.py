@@ -55,6 +55,12 @@ class UserCreateSerializer(serializers.ModelSerializer):
             'role', 'status', 'organization', 'department', 'phone',
             'assigned_region', 'assigned_department', 'assigned_commune'
         ]
+
+    def validate_role(self, value):
+        # Backward compatibility for legacy frontend payloads.
+        if value == 'viewers':
+            return User.Role.VIEWER
+        return value
     
     def create(self, validated_data):
         password = validated_data.pop('password')
