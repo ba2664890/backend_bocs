@@ -5,6 +5,7 @@ from rest_framework import viewsets, status, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
+from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from django.contrib.auth import authenticate, get_user_model
 from django.utils import timezone
 from .models import Permission
@@ -12,6 +13,7 @@ from .serializers import (
     UserSerializer,
     UserCreateSerializer,
     UserUpdateSerializer,
+    UserProfileUpdateSerializer,
     ChangePasswordSerializer,
     LoginSerializer,
     TokenSerializer,
@@ -123,11 +125,28 @@ class UserViewSet(viewsets.ModelViewSet):
             Token.objects.filter(user=request.user).delete()
         return Response({'message': 'Déconnexion réussie'})
     
-    @action(detail=False, methods=['get'], permission_classes=[permissions.IsAuthenticated])
+    @action(
+        detail=False,
+        methods=['get', 'patch'],
+        permission_classes=[permissions.IsAuthenticated],
+        parser_classes=[MultiPartParser, FormParser, JSONParser]
+    )
     def me(self, request):
         """Récupérer le profil de l'utilisateur connecté"""
-        serializer = UserSerializer(request.user)
-        return Response(serializer.data)
+        if request.method == 'GET':
+            serializer = UserSerializer(request.user, context={'request': request})
+            return Response(serializer.data)
+
+        serializer = UserProfileUpdateSerializer(
+            request.user,
+            data=request.data,
+            partial=True,
+            context={'request': request}
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(UserSerializer(request.user, context={'request': request}).data)
     
     @action(detail=False, methods=['post'], permission_classes=[permissions.IsAuthenticated])
     def change_password(self, request):

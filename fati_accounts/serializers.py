@@ -83,6 +83,20 @@ class UserUpdateSerializer(serializers.ModelSerializer):
         ]
 
 
+class UserProfileUpdateSerializer(serializers.ModelSerializer):
+    """Serializer pour la mise à jour du profil utilisateur connecté"""
+
+    avatar = serializers.ImageField(required=False, allow_null=True)
+
+    class Meta:
+        model = User
+        fields = [
+            'first_name', 'last_name',
+            'organization', 'department', 'phone',
+            'avatar'
+        ]
+
+
 class ChangePasswordSerializer(serializers.Serializer):
     """Serializer pour le changement de mot de passe"""
     
