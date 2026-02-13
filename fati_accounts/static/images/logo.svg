@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-label="FATI">
+  <rect width="320" height="80" rx="10" fill="#1f7a1f"/>
+  <text x="24" y="52" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">
+    FATI
+  </text>
+  <text x="114" y="52" font-family="Arial, sans-serif" font-size="14" fill="#e8f5e9">
+    Administration
+  </text>
+</svg>
