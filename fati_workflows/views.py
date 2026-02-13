@@ -1,6 +1,7 @@
 """
 FATI Workflows - Views
 """
+from django.db import models
 from django.utils import timezone
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, status, filters
@@ -15,8 +16,7 @@ from .serializers import (
     WorkflowInstanceCreateSerializer,
     WorkflowStepSerializer,
     AlertSerializer,
-    WorkflowTransitionSerializer,
-    AlertMarkReadSerializer
+    WorkflowTransitionSerializer
 )
 
 
@@ -168,12 +168,21 @@ class AlertViewSet(viewsets.ModelViewSet):
             result[severity] = count
         return Response(result)
     
-    @action(detail=True, methods=['post'])
-    def mark_as_read(self, request, pk=None):
-        """Marquer une alerte comme lue"""
+    def _mark_alert_as_read(self, request, pk=None):
+        """Appliquer le marquage d'une alerte comme lue."""
         alert = self.get_object()
         alert.mark_as_read(request.user)
         return Response({'message': 'Alerte marquée comme lue'})
+
+    @action(detail=True, methods=['post'], url_path='mark_read', url_name='mark-read')
+    def mark_read(self, request, pk=None):
+        """Marquer une alerte comme lue (endpoint frontend)."""
+        return self._mark_alert_as_read(request, pk)
+
+    @action(detail=True, methods=['post'], url_path='mark_as_read', url_name='mark-as-read')
+    def mark_as_read(self, request, pk=None):
+        """Alias rétrocompatible vers le marquage en lecture."""
+        return self._mark_alert_as_read(request, pk)
     
     @action(detail=False, methods=['post'])
     def mark_all_read(self, request):
@@ -184,7 +193,3 @@ class AlertViewSet(viewsets.ModelViewSet):
         return Response({
             'message': f'{alerts.count()} alertes marquées comme lues'
         })
-
-
-# Import manquant
-from django.db import models
