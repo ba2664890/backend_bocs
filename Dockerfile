@@ -27,11 +27,8 @@ COPY . .
 
 # Créer les répertoires nécessaires
 RUN mkdir -p media staticfiles logs
-
-RUN python manage.py makemigrations
-RUN python manage.py migrate
 # Exposer le port
 EXPOSE 8000
 
-# Commande par défaut
-CMD ["gunicorn", "fati_backend.wsgi:application", "-b", "0.0.0.0:8000"]
+# Commande par défaut (Railway/runtime)
+CMD ["sh", "-c", "python manage.py migrate && python manage.py collectstatic --noinput && python manage.py create_superuser --email \"${DJANGO_SUPERUSER_EMAIL:-admin@fati.gov.sn}\" --password \"${DJANGO_SUPERUSER_PASSWORD:-admin123}\" && gunicorn fati_backend.wsgi:application -b 0.0.0.0:8000"]
