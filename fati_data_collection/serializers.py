@@ -44,6 +44,11 @@ class DataCollectionSerializer(serializers.ModelSerializer):
             'created_by', 'created_by_name',
             'created_at', 'updated_at'
         ]
+        read_only_fields = [
+            'created_by', 'created_by_name',
+            'indicators_count', 'submissions_count',
+            'response_rate', 'created_at', 'updated_at'
+        ]
 
 
 class DataCollectionDetailSerializer(DataCollectionSerializer):

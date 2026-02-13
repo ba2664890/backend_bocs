@@ -29,6 +29,10 @@ class DataCollectionViewSet(viewsets.ModelViewSet):
         if self.action == 'retrieve':
             return DataCollectionDetailSerializer
         return DataCollectionSerializer
+
+    def perform_create(self, serializer):
+        """Créer une collecte avec l'utilisateur connecté comme auteur"""
+        serializer.save(created_by=self.request.user)
     
     @action(detail=True, methods=['get'])
     def submissions(self, request, pk=None):
