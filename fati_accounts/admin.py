@@ -49,6 +49,6 @@ class UserAdmin(BaseUserAdmin):
 class PermissionAdmin(admin.ModelAdmin):
     """Configuration admin pour les permissions"""
     
-    list_display = ['role', 'resource', 'actions']
+    list_display = ('role', 'resource', 'actions')
     list_filter = ['role', 'resource']
     search_fields = ['role', 'resource']
