@@ -23,7 +23,7 @@ DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,projetstatagricole-production.up.railway.app').split(',')
 
 CSRF_TRUSTED_ORIGINS = [ 'https://projet-bocs-app.vercel.app', 'http://projetstatagricole-production.up.railway.app',
-,'*']
+]
 
 # Application definition
 INSTALLED_APPS = [
