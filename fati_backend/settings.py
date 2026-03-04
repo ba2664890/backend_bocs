@@ -22,9 +22,7 @@ DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,projetstatagricole-production.up.railway.app').split(',')
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://projetstatagricole-production.up.railway.app',
-    'https://projet-bocs-app.vercel.app',
+CSRF_TRUSTED_ORIGINS = [ '*'
 ]
 
 # Application definition
